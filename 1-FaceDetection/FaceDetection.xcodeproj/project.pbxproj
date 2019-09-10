@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB2537772328065000520429 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2537762328065000520429 /* HomeCell.swift */; };
 		DB9C64292328042400524AA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C64282328042400524AA7 /* AppDelegate.swift */; };
-		DB9C642B2328042400524AA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C642A2328042400524AA7 /* ViewController.swift */; };
+		DB9C642B2328042400524AA7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9C642A2328042400524AA7 /* HomeViewController.swift */; };
 		DB9C642E2328042400524AA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9C642C2328042400524AA7 /* Main.storyboard */; };
 		DB9C64302328042600524AA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB9C642F2328042600524AA7 /* Assets.xcassets */; };
 		DB9C64332328042600524AA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB9C64312328042600524AA7 /* LaunchScreen.storyboard */; };
@@ -34,9 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB2537762328065000520429 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		DB9C64252328042400524AA7 /* FaceDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB9C64282328042400524AA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB9C642A2328042400524AA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB9C642A2328042400524AA7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DB9C642D2328042400524AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB9C642F2328042600524AA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB9C64322328042600524AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,6 +76,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB25377A232806A900520429 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB9C642A2328042400524AA7 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DB25377B232806B100520429 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB2537762328065000520429 /* HomeCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DB9C641C2328042400524AA7 = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +115,12 @@
 		DB9C64272328042400524AA7 /* FaceDetection */ = {
 			isa = PBXGroup;
 			children = (
+				DB25377B232806B100520429 /* Views */,
+				DB25377A232806A900520429 /* Controllers */,
 				DB9C64282328042400524AA7 /* AppDelegate.swift */,
-				DB9C642A2328042400524AA7 /* ViewController.swift */,
 				DB9C642C2328042400524AA7 /* Main.storyboard */,
-				DB9C642F2328042600524AA7 /* Assets.xcassets */,
 				DB9C64312328042600524AA7 /* LaunchScreen.storyboard */,
+				DB9C642F2328042600524AA7 /* Assets.xcassets */,
 				DB9C64342328042600524AA7 /* Info.plist */,
 			);
 			path = FaceDetection;
@@ -256,7 +275,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB9C642B2328042400524AA7 /* ViewController.swift in Sources */,
+				DB9C642B2328042400524AA7 /* HomeViewController.swift in Sources */,
+				DB2537772328065000520429 /* HomeCell.swift in Sources */,
 				DB9C64292328042400524AA7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
