@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewControllerImpl" customModule="CreditCard" customModuleProvider="target">
+            <connections>
+                <outlet property="cameraView" destination="xAQ-W5-BPP" id="Jcy-wA-65J"/>
+                <outlet property="captureView" destination="cye-nA-3NA" id="g3P-45-9aT"/>
+                <outlet property="creditCardImageView" destination="1SB-IX-XbC" id="Pzb-DJ-HN7"/>
+                <outlet property="redoView" destination="704-H3-atT" id="EHd-mK-xQ1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAQ-W5-BPP" userLabel="Camera View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credit-card" translatesAutoresizingMaskIntoConstraints="NO" id="1SB-IX-XbC">
+                    <rect key="frame" x="12" y="325" width="390" height="246"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="1SB-IX-XbC" secondAttribute="height" multiplier="85.6: 53.98" id="gHM-DF-McE"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Et7-j2-pQ8">
+                    <rect key="frame" x="175" y="790" width="64" height="64"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cye-nA-3NA">
+                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X54-4P-rYs">
+                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="64" id="4CG-Pc-hhO"/>
+                                        <constraint firstAttribute="height" constant="64" id="9K0-sK-Qio"/>
+                                    </constraints>
+                                    <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" image="creditcard.fill" catalog="system"/>
+                                    <connections>
+                                        <action selector="didTapCapture:" destination="-1" eventType="touchUpInside" id="NBb-Q8-vVs"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="X54-4P-rYs" firstAttribute="centerY" secondItem="cye-nA-3NA" secondAttribute="centerY" id="aUK-Uw-MCQ"/>
+                                <constraint firstAttribute="height" constant="64" id="bMk-yy-SxT"/>
+                                <constraint firstAttribute="width" constant="64" id="gum-wg-Ffx"/>
+                                <constraint firstItem="X54-4P-rYs" firstAttribute="centerX" secondItem="cye-nA-3NA" secondAttribute="centerX" id="pth-9Q-Y0o"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="32"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="704-H3-atT">
+                            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jk1-Ox-PRH">
+                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="64" id="C0G-AB-kLC"/>
+                                        <constraint firstAttribute="height" constant="64" id="qvb-9Y-mI3"/>
+                                    </constraints>
+                                    <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" image="arrow.clockwise" catalog="system"/>
+                                    <connections>
+                                        <action selector="didTapRedo:" destination="-1" eventType="touchUpInside" id="PNS-uW-urc"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="jk1-Ox-PRH" firstAttribute="centerY" secondItem="704-H3-atT" secondAttribute="centerY" id="52L-hF-tQB"/>
+                                <constraint firstAttribute="width" constant="64" id="ZYH-Zo-aHf"/>
+                                <constraint firstAttribute="height" constant="64" id="vBY-zV-gop"/>
+                                <constraint firstItem="jk1-Ox-PRH" firstAttribute="centerX" secondItem="704-H3-atT" secondAttribute="centerX" id="xU9-Fx-KLU"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="32"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Et7-j2-pQ8" secondAttribute="bottom" constant="8" id="FJl-6W-NeH"/>
+                <constraint firstAttribute="trailing" secondItem="xAQ-W5-BPP" secondAttribute="trailing" id="XO6-L2-Mo1"/>
+                <constraint firstItem="xAQ-W5-BPP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="i6h-gj-7uV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1SB-IX-XbC" secondAttribute="trailing" constant="12" id="jEo-SQ-Hz4"/>
+                <constraint firstItem="Et7-j2-pQ8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mQb-J3-Dii"/>
+                <constraint firstAttribute="bottom" secondItem="xAQ-W5-BPP" secondAttribute="bottom" id="oGY-lk-csm"/>
+                <constraint firstItem="1SB-IX-XbC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="rpd-72-GKY"/>
+                <constraint firstItem="1SB-IX-XbC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="usd-FY-iDC"/>
+                <constraint firstItem="xAQ-W5-BPP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="utk-NS-rdc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
+        <image name="credit-card" width="2000" height="2000"/>
+        <image name="creditcard.fill" catalog="system" width="64" height="44"/>
+    </resources>
+</document>
