@@ -1,24 +1,19 @@
-//
-//  HomePresenter.swift
-//  CreditCard
-//
-//  Created by Mehmet Tarhan on 29.02.2020.
-//  Copyright © 2020 Mehmet Tarhan. All rights reserved.
-//
+# CreditCard 
 
-import UIKit
-import Vision
+### Detecting a Credit Card with Apple's Vision Framework
 
-protocol HomePresenter {
-    var view: HomeViewController? { get set }
+> This repo implements a iOS app that helps users to take a clean photo of their credit, debit card. 
 
-    func detectCard(in image: CVPixelBuffer)
-}
+[For more, please contact me at]: contact@memtarhan.com
 
-class HomePresenterImpl: HomePresenter {
-    var view: HomeViewController?
+###### For more please contact me at: contact@memtarhan.com 
 
-    /**
+
+
+##### Detecting a card goes as following:
+
+```swift
+/**
      Detecting a credit card from live view
      - Parameter in: A preview from live view
      */
@@ -39,8 +34,10 @@ class HomePresenterImpl: HomePresenter {
         let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: image, options: [:])
         try? imageRequestHandler.perform([request])
     }
+```
 
-    /**
+```swift
+/**
      Correcting perspection for a preview
      - Parameter with: Observation on live view
      - Parameter from: Preview
@@ -62,9 +59,7 @@ class HomePresenterImpl: HomePresenter {
 
         let context = CIContext()
         let cgImage = context.createCGImage(ciImage, from: ciImage.extent)
-        let image = UIImage(cgImage: cgImage!)
-        /// - Saving to saved photos album
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        view?.display(image: image)
+        let image = UIImage(cgImage: cgImage!) // Detected image 
     }
-}
+```
+
